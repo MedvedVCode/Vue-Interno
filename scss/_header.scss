@@ -1,0 +1,12 @@
+.header {
+  padding: 44px 0 57px 1px;
+	margin: 0 20px;
+  @include lines();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&--nav{
+		display: flex;
+		gap: 50px;
+	}
+}

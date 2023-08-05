@@ -1,0 +1,15 @@
+$borderColor: #e6e6e6;
+$accentColor: #CDA274;
+$accentBGColor: #F4F0EC;
+$titleTxtColor: #292F36;
+$textColor: #4D5053;
+
+@mixin lines {
+  background-image: repeating-linear-gradient(
+    to left,
+    $borderColor,
+    $borderColor 1px,
+    white 1px,
+    white calc(100% / 3 - 1px)
+  );
+}
