@@ -59,9 +59,9 @@ button {
 }
 
 .header {
-  padding: 44px 0 57px 1.5px;
+  padding: 44px 0 57px 1px;
   margin: 0 20px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1.5px, white 1.5px, white calc(33.3333333333% - 1.5px));
+  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +73,8 @@ button {
 
 .banner {
   margin: 0 20px;
-  padding-left: 1.5px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1.5px, white 1.5px, white calc(33.3333333333% - 1.5px));
+  padding-left: 1px;
+  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
 }
 .banner-wrp {
   border-radius: 70px;
@@ -141,8 +141,8 @@ button {
 }
 
 .project {
-  padding: 96px 0 96px 1.5px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1.5px, white 1.5px, white calc(33.3333333333% - 1.5px));
+  padding: 96px 0 96px 1px;
+  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
   margin: 0 20px;
   text-align: center;
 }
@@ -234,4 +234,160 @@ button {
 }
 .project__card-link:hover path {
   stroke: #CDA274;
+}
+
+.counter {
+  background-color: #F4F0EC;
+  padding: 151px 0;
+}
+.counter__list {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter__item {
+  max-width: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.counter__item:before {
+  content: "";
+  height: 130px;
+  display: block;
+  border: 1px solid #CDA274;
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+}
+.counter__item:last-child::before {
+  content: none;
+}
+.counter__value {
+  font-family: DM Serif Display;
+  font-size: 85px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1.7px;
+  color: #CDA274;
+}
+.counter__description {
+  margin-top: 16px;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  text-transform: capitalize;
+}
+
+.blog {
+  margin: 0 20px;
+  padding: 96px 0 96px 2px;
+  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
+}
+.blog__title {
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  color: #292F36;
+  text-align: center;
+}
+.blog__text {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  max-width: 811px;
+  width: 100%;
+  margin: 12px auto 52px auto;
+  text-align: center;
+}
+.blog_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-items: stretch;
+}
+.blog__item {
+  padding: 21px;
+  border: 1px solid #e6e6e6;
+  border-radius: 62px;
+  transition: all 0.3s;
+}
+.blog__item:hover {
+  background-color: #F4F0EC;
+}
+.blog__item:hover .blog__link {
+  background-color: #fff;
+}
+.blog__img {
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+.blog__img-wrp {
+  position: relative;
+}
+.blog__tags {
+  position: absolute;
+  width: 135px;
+  padding: 4px 0 8px 11px;
+  background-color: #fff;
+  border-radius: 8px 8px 8px 0;
+  z-index: 2;
+  left: 20px;
+  bottom: 20px;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.16px;
+}
+.blog__description {
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  color: #292F36;
+  width: 305px;
+  margin-top: 15px;
+  text-align: left;
+}
+.blog__data {
+  margin-top: 26px;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  color: #4D5053;
+}
+.blog__link {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog__link path {
+  stroke: #292F36;
+}
+.blog__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
 }/*# sourceMappingURL=style.css.map */
