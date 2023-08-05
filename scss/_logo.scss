@@ -1,17 +1,17 @@
 .logo {
   display: flex;
   align-items: center;
-  &-img svg{
+  transition: color 0.3s;
+  &-img {
     fill: $accentColor;
   }
   &-title {
     margin-left: 10px;
     text-transform: uppercase;
     color: $titleTxtColor;
-    font-family: DM Serif Display;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%;
+    @include dmSerif(40px, 125%, normal);
+  }
+  &:hover p {
+    color: $accentColor;
   }
 }
