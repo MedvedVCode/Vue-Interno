@@ -1,6 +1,6 @@
 .banner {
   margin: 0 20px;
-  padding-left: 1px;
+  padding-left: $borderSize;
   @include lines();
   &-wrp {
     border-radius: 70px;
@@ -20,7 +20,7 @@
     @include dmSerif(65px, 125%, normal);
     max-width: 434px;
     width: 100%;
-		text-transform: capitalize;
+    text-transform: capitalize;
   }
   &-text {
     margin-top: 18px;
@@ -45,12 +45,12 @@
       stroke: $accentColor;
     }
     &:hover {
-			cursor: pointer;
+      cursor: pointer;
       background-color: white;
       color: $accentColor;
-			& svg{
-				fill: white;
-			}
+      & svg {
+        fill: white;
+      }
     }
   }
 }
