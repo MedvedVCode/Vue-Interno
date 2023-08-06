@@ -17,9 +17,37 @@ button {
 }
 
 .center {
-  max-width: 1240px;
-  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
+}
+.center-lines {
+  background-color: transparent;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  position: relative;
+}
+.center-lines::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 33.3333%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  z-index: -1;
+}
+.center-lines::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 33.3333%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e6e6e6;
+  z-index: -1;
 }
 
 .logo {
@@ -59,9 +87,7 @@ button {
 }
 
 .header {
-  padding: 44px 0 57px 1px;
-  margin: 0 20px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
+  padding: 44px 0 57px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,11 +97,6 @@ button {
   gap: 50px;
 }
 
-.banner {
-  margin: 0 20px;
-  padding-left: 1px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
-}
 .banner-wrp {
   border-radius: 70px;
   background-image: url(../images/banner-back-img.png);
@@ -141,9 +162,7 @@ button {
 }
 
 .project {
-  padding: 96px 0 96px 1px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
-  margin: 0 20px;
+  padding: 96px 0;
   text-align: center;
 }
 .project__title {
@@ -257,9 +276,10 @@ button {
 }
 .counter__item:before {
   content: "";
+  width: 1px;
   height: 130px;
   display: block;
-  border: 1px solid #CDA274;
+  background-color: #CDA274;
   position: absolute;
   right: 0;
   bottom: 7px;
@@ -287,9 +307,7 @@ button {
 }
 
 .blog {
-  margin: 0 20px;
-  padding: 96px 0 96px 2px;
-  background-image: repeating-linear-gradient(to left, #e6e6e6, #e6e6e6 1px, white 1px, white calc(33.3333333333% - 1px));
+  padding: 96px 0;
 }
 .blog__title {
   font-family: DM Serif Display;
@@ -315,14 +333,15 @@ button {
 .blog_list {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
-  justify-items: stretch;
 }
 .blog__item {
   padding: 21px;
   border: 1px solid #e6e6e6;
   border-radius: 62px;
   transition: all 0.3s;
+  background-color: #fff;
 }
 .blog__item:hover {
   background-color: #F4F0EC;
@@ -360,7 +379,8 @@ button {
   line-height: 125%;
   letter-spacing: 0.5px;
   color: #292F36;
-  width: 305px;
+  max-width: 305px;
+  width: 100%;
   margin-top: 15px;
   text-align: left;
 }
@@ -381,9 +401,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: stroke 0.3s;
 }
 .blog__link path {
   stroke: #292F36;
+}
+.blog__link:hover path {
+  stroke: #CDA274;
 }
 .blog__footer {
   display: flex;

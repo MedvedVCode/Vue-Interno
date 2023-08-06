@@ -1,7 +1,5 @@
 .blog {
-  margin: 0 20px;
-  padding: 96px 0 96px $borderSize * 2;
-  @include lines;
+  padding: 96px 0;
   &__title {
     @include dmSerif(50px, 125%, 1px);
     color: $titleTxtColor;
@@ -18,14 +16,15 @@
   &_list {
     display: flex;
     justify-content: space-between;
+		align-items: stretch;
     flex-wrap: wrap;
-    justify-items: stretch;
   }
   &__item {
     padding: 21px;
     border: 1px solid $borderColor;
     border-radius: 62px;
     transition: all 0.3s;
+		background-color: #fff;
     &:hover {
       background-color: $accentBGColor;
       & .blog__link {
@@ -55,7 +54,8 @@
   &__description {
     @include dmSerif(25px, 125%, 0.5px);
     color: $titleTxtColor;
-    width: 305px;
+    max-width: 305px;
+    width: 100%;
     margin-top: 15px;
     text-align: left;
   }
@@ -72,8 +72,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: stroke 0.3s;
     & path {
       stroke: $titleTxtColor;
+    }
+    &:hover path {
+      stroke: $accentColor;
     }
   }
   &__footer {

@@ -1,7 +1,4 @@
 .banner {
-  margin: 0 20px;
-  padding-left: $borderSize;
-  @include lines();
   &-wrp {
     border-radius: 70px;
     background-image: url(../images/banner-back-img.png);
