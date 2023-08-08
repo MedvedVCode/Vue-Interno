@@ -1,0 +1,48 @@
+.latest-post {
+  padding-top: 200px;
+  &__title {
+    @include dmSerif(45px, 125%, 1px);
+    color: $titleTxtColor;
+  }
+	&__card {
+		margin-top: 27px;
+    display: flex;
+    flex-direction: row-reverse;
+		justify-content: flex-end;
+    gap: 65px;
+    padding: 22px;
+    border-radius: 62px;
+    border: 1px solid $borderColor;
+  }
+	&__text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 489px;
+		width: 100%;
+	}
+	&__name{
+		@include dmSerif(25px, 125%, 0.5px);
+		color: $titleTxtColor;
+	}
+	&__annotation{
+		margin-top: 22px;
+		@include jost(22px, 400, 150%, 0.22px);
+		color: $textColor;
+		max-width: 469px;
+		width: 100%;
+	}
+	&__footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 41px;
+	}
+	&__data{
+		@include jost(16px, 400, 150%, 0.16px);
+		color: $textColor;
+	}
+	&__img{
+		border-radius: 50px;
+	}
+}

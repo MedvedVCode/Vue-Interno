@@ -1,0 +1,27 @@
+.blog-banner {
+  background-image: url(../images/blog-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 356px;
+	display: flex;
+	align-items: end;
+  &__text {
+    background-color: #fff;
+    border-top-left-radius: 37px;
+    border-top-right-radius: 37px;
+    margin: auto auto 0 auto;
+		max-width: 503px;
+		width: 100%;
+		height: 178px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+  }
+	
+  &__title {
+		@include dmSerif(50px, 125%, normal);
+		color: $titleTxtColor;
+  }
+}
