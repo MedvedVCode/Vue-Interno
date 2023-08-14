@@ -22,14 +22,18 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     flex-wrap: wrap;
 		row-gap: 30px;
     &--margin-top {
       margin-top: 30px;
     }
+		& li{
+			display: flex;
+			align-items: stretch;
+		}
   }
   &__item {
+		// align-self: stretch;
     padding: 21px;
     border: 1px solid $borderColor;
     border-radius: 62px;
@@ -70,7 +74,7 @@
     text-align: left;
   }
   &__data {
-    margin-top: 26px;
+    
     @include jost(16px, 400, 150%, 0.16px);
     color: $textColor;
   }
@@ -91,6 +95,8 @@
     }
   }
   &__footer {
+		// margin-top: 26px;
+		align-self: flex-end;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,6 +129,7 @@
 				stroke: $titleTxtColor;
 			}
 			&:hover{
+				cursor: pointer;
 				color: $accentColor;
 				& path{
 					stroke: $accentColor;

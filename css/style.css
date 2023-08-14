@@ -339,12 +339,15 @@ button {
 .blog__list {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   flex-wrap: wrap;
   row-gap: 30px;
 }
 .blog__list--margin-top {
   margin-top: 30px;
+}
+.blog__list li {
+  display: flex;
+  align-items: stretch;
 }
 .blog__item {
   padding: 21px;
@@ -395,7 +398,6 @@ button {
   text-align: left;
 }
 .blog__data {
-  margin-top: 26px;
   font-family: Jost;
   font-size: 16px;
   font-weight: 400;
@@ -420,6 +422,7 @@ button {
   stroke: #CDA274;
 }
 .blog__footer {
+  align-self: flex-end;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -456,6 +459,7 @@ button {
   stroke: #292F36;
 }
 .blog__scroll-button:hover {
+  cursor: pointer;
   color: #CDA274;
 }
 .blog__scroll-button:hover path {
@@ -655,4 +659,166 @@ button {
 }
 .latest-post__img {
   border-radius: 50px;
+}
+
+.blog-details__banner {
+  background-image: url(../images/blog-details-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 351px;
+}
+.blog-details__wrp {
+  padding: 200px 0 96px;
+  display: flex;
+}
+.blog-details__text {
+  margin-right: 51px;
+  max-width: 66.6666%;
+}
+.blog-details__text-title {
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  color: #292F36;
+}
+.blog-details__text-img {
+  margin-top: 21px;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.blog-details__text-data {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  color: #4D5053;
+}
+.blog-details__text-annotation {
+  margin-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.blog-details__text-annotation--font-size li a {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+}
+.blog-details__text-paragraph {
+  margin-top: 30px;
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  color: #4D5053;
+}
+.blog-details__text-quote {
+  margin-top: 35px;
+  margin-bottom: 27px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #F4F0EC;
+  color: #CDA274;
+  height: 267px;
+  font-style: italic;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+.blog-details__text-quote span {
+  font-family: DM Serif Display;
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 4px;
+  position: absolute;
+  top: calc(50% - 132px);
+  left: calc(50% - 56px);
+}
+.blog-details__text-quote p {
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: 53px;
+  max-width: 345px;
+  width: 100%;
+  text-align: center;
+}
+.blog-details__text-list {
+  list-style-type: none;
+  counter-reset: listItemNumber 0;
+}
+.blog-details__text-list li {
+  position: relative;
+  padding-left: 20px;
+}
+.blog-details__text-list li:before {
+  content: counter(listItemNumber);
+  counter-increment: listItemNumber 1;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  font-family: DM Serif Display;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.4px;
+  color: #CDA274;
+}
+.blog-details__text-list li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.blog-details__text--img {
+  margin-top: 44px;
+  margin-bottom: 5px;
+}
+.blog-details__tags {
+  max-width: 351px;
+  width: 100%;
+  color: #292F36;
+}
+.blog-details__tags-title {
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.blog-details__tags-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 11px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.blog-details__tags-btn {
+  font-family: Jost;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  padding: 9px 30px;
+  border-radius: 10px;
+  background-color: #F4F0EC;
+  cursor: pointer;
+}
+.blog-details__tags-btn--selected {
+  color: white;
+  background-color: #292F36;
+}
+.blog-details__tags-btn:hover {
+  color: #CDA274;
 }/*# sourceMappingURL=style.css.map */
