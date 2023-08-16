@@ -1,9 +1,15 @@
 .blog {
   padding: 96px 0;
+	&--padding{
+		padding: 200px 0;
+	}
   &__title {
     @include dmSerif(50px, 125%, 1px);
     color: $titleTxtColor;
     text-align: center;
+    &--align-left {
+      text-align: left;
+    }
   }
   &__text {
     color: $textColor;
@@ -13,18 +19,22 @@
     margin: 12px auto 52px auto;
     text-align: center;
   }
-  &_list {
+  &__list {
     display: flex;
     justify-content: space-between;
-		align-items: stretch;
+    align-items: stretch;
     flex-wrap: wrap;
+		row-gap: 30px;
+    &--margin-top {
+      margin-top: 30px;
+    }
   }
   &__item {
     padding: 21px;
     border: 1px solid $borderColor;
     border-radius: 62px;
     transition: all 0.3s;
-		background-color: #fff;
+    background-color: #fff;
     &:hover {
       background-color: $accentBGColor;
       & .blog__link {
@@ -86,4 +96,38 @@
     align-items: center;
     margin-bottom: 17px;
   }
+	&__scroll{
+		&-list{
+			margin-top: 51px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+		}
+		&-button{
+			height: 52px;
+			width: 52px;
+			border-radius: 50%;
+			border: 1px solid $accentColor;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include jost(16px, 500, 150%, normal);
+			color: $titleTxtColor;
+			background-color: white;
+			transition: all .3s;
+			&--selected{
+				background-color: $accentBGColor;
+			}
+			& path{
+				stroke: $titleTxtColor;
+			}
+			&:hover{
+				color: $accentColor;
+				& path{
+					stroke: $accentColor;
+				}
+			}
+		}
+	}
 }

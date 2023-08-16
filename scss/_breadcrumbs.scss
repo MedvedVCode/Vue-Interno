@@ -1,0 +1,23 @@
+.breadcrumbs {
+  display: flex;
+  &__item {
+    & a {
+      @include jost(22px, 400, 125%, 0.22px);
+      color: $textColor;
+      &:hover {
+        color: $accentColor;
+      }
+    }
+    &::after {
+      content: '/ ';
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    &:last-child {
+      &::after {
+        content: none;
+        margin-right: 0;
+      }
+    }
+  }
+}

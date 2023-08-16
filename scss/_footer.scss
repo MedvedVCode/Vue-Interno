@@ -19,6 +19,15 @@
         display: flex;
         gap: 54px;
       }
+      &-link {
+        & svg {
+          fill: $titleTxtColor;
+          transition: color 0.3s;
+        }
+        &:hover svg {
+          fill: $accentColor;
+        }
+      }
     }
   }
   &__title {
@@ -39,8 +48,8 @@
   &__contacts {
     max-width: 258px;
     width: 100%;
-		margin-left: auto;
-		margin-right: 0;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   &--text {
@@ -51,5 +60,11 @@
   &__address {
     margin-top: 26px;
     line-height: 150%;
+  }
+  &__phone,
+  &__mail {
+    &:hover {
+      color: $accentColor;
+    }
   }
 }
