@@ -6,7 +6,7 @@ new Vue({
         id: Date.now().toString(),
         url: '/images/blog-item-img-01.png',
         tag: 'Kitchen Design',
-        title: 'Let&acute;s Get Solution For Building Construction Work',
+        title: 'Let&acute;s Get Solution For Building Construction<br>Work',
         data: '26 December, 2022',
       },
       {
@@ -27,7 +27,7 @@ new Vue({
         id: Date.now().toString(),
         url: '/images/blog-item-img-04.png',
         tag: 'Kitchen Design',
-        title: 'Let&acute;s Get Solution For Building Construction Work',
+        title: 'Let&acute;s Get Solution For Building Construction<br>Work',
         data: '26 December, 2022',
       },
       {

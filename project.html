@@ -20,18 +20,14 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Jost&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="/css/style.css"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"
-      defer
-    ></script>
-    <script
-      src="/scripts/vue.js"
-      defer
-    ></script>
-    <title>INTERNO Blog</title>
+    <title>INTERNO Projects</title>
   </head>
   <body class="body">
     <header class="center center-lines">
@@ -69,147 +65,49 @@
       </div>
     </header>
     <main class="main">
-      <section class="blog-banner">
+      <section class="blog-banner blog-banner--project">
         <div class="blog-banner__text center">
-          <h1 class="blog-banner__title">Articles & News</h1>
+          <h1 class="blog-banner__title">Our Project</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
-            <li class="breadcrumbs__item"><a href="blog.html">Blog</a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="center center-lines">
-        <div class="latest-post">
-          <h2 class="latest-post__title">Latest Post</h2>
-          <article class="latest-post__card">
-            <div class="latest-post__text">
-              <h3 class="latest-post__name">
-                Low Cost Latest Invented Interior Designing Ideas
-              </h3>
-              <p class="latest-post__annotation">
-                Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-                turpis dignissim maximus.posuere in. Contrary to popular belief.
-              </p>
-              <p class="latest-post__annotation">
-                Lorem Ipsum is not simply random text. It has roots in a piece
-                of classica.
-              </p>
-              <div class="latest-post__footer">
-                <p class="latest-post__data">26 December, 2022</p>
-                <a
-                  href="#"
-                  class="blog__link"
-                >
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <img
-              src="/images/latest-post-img.png"
-              alt="latest post interior photo"
-              height="478"
-              class="latest-post__img"
-            />
-          </article>
-        </div>
-      </section>
-      <section class="center center-lines">
-        <div class="blog blog--padding">
-          <h2 class="blog__title blog__title--align-left">Articles & News</h2>
-          <ul
-            class="blog__list blog__list--margin-top"
-            id="blog-list"
-          >
-            <li
-              v-for="{id, url, tag, title, data} in blogList"
-              :key="id+url"
-            >
-              <article class="blog__item">
-                <div class="blog__img-wrp">
-                  <img
-                    class="blog__img"
-                    :src="url"
-                    alt="interior photo"
-                    width="340"
-                    height="289"
-                  />
-                  <p class="blog__tags">{{tag}}</p>
-                </div>
-                <p
-                  class="blog__description"
-                  v-html="title"
-                ></p>
-                <div class="blog__footer">
-                  <p class="blog__data">{{data}}</p>
-                  <a
-                    href="blog-details.html"
-                    class="blog__link"
-                  >
-                    <svg
-                      width="9"
-                      height="16"
-                      viewBox="0 0 9 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <ul class="blog__scroll-list">
-            <li class="blog__scroll-item">
-              <button class="blog__scroll-button blog__scroll-button--selected">
-                01
-              </button>
-            </li>
-            <li class="blog__scroll-item">
-              <button class="blog__scroll-button">02</button>
-            </li>
-            <li class="blog__scroll-item">
-              <button class="blog__scroll-button">03</button>
-            </li>
-            <li class="blog__scroll-item">
-              <button class="blog__scroll-button">
-                <svg
-                  width="9"
-                  height="16"
-                  viewBox="0 0 9 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
+            <li class="breadcrumbs__item">
+              <a href="project.html">Project</a>
             </li>
           </ul>
         </div>
       </section>
+      <section class="project-categories--wrp center center-lines">
+        <ul class="categories">
+          <li><button class="categories__item">Bathroom</button></li>
+          <li>
+            <button class="categories__item categories__item--selected">
+              Bed Room
+            </button>
+          </li>
+          <li><button class="categories__item">Kitchen</button></li>
+          <li><button class="categories__item">Living Area</button></li>
+        </ul>
+      </section>
+			<section class="project__gallery center center-lines">
+				<ul class="project__gallery-list">
+					<li class="project__gallery-item">
+						<img src="/images/blog-item-img-01.png" alt="interior photo" height="853" class="project__card-img">
+						<div class="project__card-description">
+							<h3 class="project__card-title">Minimal Bedroom</h3>
+							<p class="project__card-text">Decor / Artchitecture</p>
+						</div>
+					</li>
+					<li class="project__gallery-item"></li>
+					<li class="project__gallery-item"></li>
+					<li class="project__gallery-item"></li>
+				</ul>
+				<ul class="project__gallery-list">
+					<li class="project__gallery-item"></li>
+					<li class="project__gallery-item"></li>
+					<li class="project__gallery-item"></li>
+					<li class="project__gallery-item"></li>
+				</ul>
+			</section>
     </main>
     <footer class="footer center center-lines">
       <ul class="footer__list">
