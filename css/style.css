@@ -263,12 +263,26 @@ button {
 .project__gallery {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  padding-bottom: 10px;
+  gap: 30px;
+}
+.project__gallery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 .project__gallery-item {
   max-width: 585px;
   width: 100%;
+}
+.project__gallery-img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.project__gallery--margin {
+  padding-bottom: 200px;
 }
 
 .counter {
