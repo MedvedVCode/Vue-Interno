@@ -23,6 +23,14 @@
       rel="stylesheet"
       href="/css/style.css"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"
+      defer
+    ></script>
+    <script
+      src="/scripts/vue.js"
+      defer
+    ></script>
     <title>INTERNO Blog</title>
   </head>
   <body class="body">
@@ -121,25 +129,72 @@
       <section class="center center-lines">
         <div class="blog blog--padding">
           <h2 class="blog__title blog__title--align-left">Articles & News</h2>
-          <ul class="blog__list blog__list--margin-top">
-            <li>
+          <ul
+            class="blog__list blog__list--margin-top"
+            id="blog-list"
+          >
+            <li
+              v-for="{id, url, tag, title, data} in blogList"
+              :key="id+url"
+            >
               <article class="blog__item">
                 <div class="blog__img-wrp">
                   <img
                     class="blog__img"
-                    src="/images/blog-item-img-01.png"
+                    :src="url"
+                    alt="interior photo"
+                    width="340"
+                    height="289"
+                  />
+                  <p class="blog__tags">{{tag}}</p>
+                </div>
+                <p
+                  class="blog__description"
+                  v-html="title"
+                ></p>
+                <div class="blog__footer">
+                  <p class="blog__data">{{data}}</p>
+                  <a
+                    href="#"
+                    class="blog__link"
+                  >
+                    <svg
+                      width="9"
+                      height="16"
+                      viewBox="0 0 9 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <!-- <li>
+              <article class="blog__item">
+                <div class="blog__img-wrp">
+                  <img
+                    class="blog__img"
+                    src="/images/blog-item-img-02.png"
                     alt="interior photo"
                     width="340"
                     height="289"
                     alt="interior photo"
                   />
-                  <p class="blog__tags">Kitchen Design</p>
+                  <p class="blog__tags">Living Design</p>
                 </div>
                 <p class="blog__description">
-                  Let&acute;s Get Solution For Building Construction Work
+                  Low Cost Latest Invented Interior Designing<br />
+                  Ideas
                 </p>
                 <div class="blog__footer">
-                  <p class="blog__data">26 December, 2022</p>
+                  <p class="blog__data">22 December, 2022</p>
                   <a
                     href="#"
                     class="blog__link"
@@ -167,20 +222,20 @@
                 <div class="blog__img-wrp">
                   <img
                     class="blog__img"
-                    src="/images/blog-item-img-02.png"
+                    src="/images/blog-item-img-03.png"
                     alt="interior photo"
                     width="340"
                     height="289"
                     alt="interior photo"
                   />
-                  <p class="blog__tags">Living Design</p>
+                  <p class="blog__tags">Interior Design</p>
                 </div>
                 <p class="blog__description">
-                  Low Cost Latest Invented Interior Designing<br />
-                  Ideas
+                  Best For Any Office & Business Interior<br />
+                  Solution
                 </p>
                 <div class="blog__footer">
-                  <p class="blog__data">22 December, 2022</p>
+                  <p class="blog__data">25 December, 2022</p>
                   <a
                     href="#"
                     class="blog__link"
@@ -325,52 +380,13 @@
                   </a>
                 </div>
               </article>
-            </li>
-            <li>
-              <article class="blog__item">
-                <div class="blog__img-wrp">
-                  <img
-                    class="blog__img"
-                    src="/images/blog-item-img-03.png"
-                    alt="interior photo"
-                    width="340"
-                    height="289"
-                    alt="interior photo"
-                  />
-                  <p class="blog__tags">Interior Design</p>
-                </div>
-                <p class="blog__description">
-                  Best For Any Office & Business Interior<br />
-                  Solution
-                </p>
-                <div class="blog__footer">
-                  <p class="blog__data">25 December, 2022</p>
-                  <a
-                    href="#"
-                    class="blog__link"
-                  >
-                    <svg
-                      width="9"
-                      height="16"
-                      viewBox="0 0 9 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            </li>
+            </li> -->
           </ul>
           <ul class="blog__scroll-list">
             <li class="blog__scroll-item">
-              <button class="blog__scroll-button blog__scroll-button--selected">01</button>
+              <button class="blog__scroll-button blog__scroll-button--selected">
+                01
+              </button>
             </li>
             <li class="blog__scroll-item">
               <button class="blog__scroll-button">02</button>

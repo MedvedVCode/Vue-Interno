@@ -1,0 +1,127 @@
+.blog-details {
+  &__banner {
+    background-image: url(../images/blog-details-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 351px;
+  }
+  &__wrp {
+    padding: 200px 0 96px;
+    display: flex;
+  }
+  &__text {
+    margin-right: 51px;
+    max-width: 66.6666%;
+    &-title {
+      @include dmSerif(50px, 125%, 1px);
+      color: $titleTxtColor;
+    }
+    &-img {
+      margin-top: 21px;
+      border-radius: 50px;
+      object-fit: cover;
+      width: 100%;
+    }
+    &-data {
+      @include jost(16px, 400, 150%, 0.16px);
+      color: $textColor;
+    }
+    &-annotation {
+      margin-top: 46px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 13px;
+      &--font-size {
+        & li a {
+          @include jost(16px, 400, 150%, 0.16px);
+        }
+      }
+    }
+    &-paragraph {
+      margin-top: 30px;
+      @include jost(22px, 400, 150%, 0.22px);
+      color: $textColor;
+    }
+    &-quote {
+      margin-top: 35px;
+      margin-bottom: 27px;
+      width: 100%;
+      border-radius: 50px;
+      background-color: $accentBGColor;
+      color: $accentColor;
+      height: 267px;
+      font-style: italic;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      position: relative;
+      & span {
+        @include dmSerif(200px, 125%, 4px);
+        position: absolute;
+        top: calc(50% - 132px);
+        left: calc(50% - 56px);
+      }
+      & p {
+        @include dmSerif(25px, 125%, 0.5px);
+        margin-bottom: 53px;
+        max-width: 345px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &-list {
+      list-style-type: none;
+      counter-reset: listItemNumber 0;
+      & li {
+				position: relative;
+				padding-left: 20px;
+        &:before {
+					content: counter(listItemNumber);
+					counter-increment: listItemNumber 1;
+					position: absolute;
+					top: 3px;
+					left: 0;
+					@include dmSerif(20px,125%,0.4px);
+					color: $accentColor;
+        }
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+		&--img{
+			margin-top: 44px;
+			margin-bottom: 5px;
+		}
+  }
+  &__tags {
+    max-width: 351px;
+    width: 100%;
+    color: $titleTxtColor;
+    &-title {
+      @include dmSerif(25px, 125%, 0.5px);
+    }
+    &-list {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 11px;
+      column-gap: 10px;
+    }
+    &-btn {
+      @include jost(18px, 400, 125%, 0.36px);
+      padding: 9px 30px;
+      border-radius: 10px;
+      background-color: $accentBGColor;
+      cursor: pointer;
+      &--selected {
+        color: white;
+        background-color: $titleTxtColor;
+      }
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+}
