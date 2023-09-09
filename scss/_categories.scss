@@ -1,0 +1,26 @@
+.categories {
+  display: flex;
+  gap: 30px;
+  border: 1px solid $accentColor;
+  border-radius: 18px;
+  align-items: center;
+  &__item {
+    @include jost(18px, 600, 125%, 0.36px);
+    border-radius: 18px;
+    padding: 26px 66px;
+    color: $titleTxtColor;
+    background-color: white;
+    &:hover {
+      color: $accentColor;
+			cursor: pointer;
+    }
+    &--selected {
+      background-color: $accentColor;
+      color: white;
+      &:hover {
+        color: $titleTxtColor;
+				cursor: pointer;
+      }
+    }
+  }
+}

@@ -24,4 +24,8 @@
 		@include dmSerif(50px, 125%, normal);
 		color: $titleTxtColor;
   }
+	&--project{
+		background-image: url(../images/project-banner.jpg);
+	}
 }
+
